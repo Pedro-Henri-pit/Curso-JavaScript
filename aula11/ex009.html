@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aeroporto</title>
+</head>
+<body>
+    <h1>Sistema de extradição</h1>
+    <h4>Para verificar se o seu visto foi concedido ou negado</h4>
+    <p><strong>Digite sua naturalidade</strong></p>
+     País de origem: <input type="Test" name="txtpaís" id="txtpaís">
+   <input type="button" value="verificar" onclick="confirm()">
+    <div id="res">
+
+    </div>
+    <script>
+    
+        function confirm () {
+            var txtp =  document.querySelector("input#txtpaís")
+            var país = txtp.value
+            
+            var res = document.querySelector("div#res") 
+           
+              if(`Brasil` == país || `Brasil` == país) {
+                res.innerHTML = `<p>Você é Estrangeiro!</p>` 
+                res.innerHTML += `<p>Visto <strong>Negado</strong> ,origem <strong>${país}</strong></p>`
+              }
+              else{
+                res.innerHTML = `<p>Você é Americano!</p>`
+                res.innerHTML += `<p>"Visto <strong>concedido</strong> ,origem <strong>${país}</strong></p>`
+               
+               }
+        }
+
+</script>
+</body>
+</html>
